@@ -1,0 +1,15 @@
+{
+  "name": "Resultados Loterias",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Seu Chrome com os resultados das Loterias Caixa em apenas um clique.",
+  "browser_action": {
+    "default_icon": "img/folha_mega_sena.gif",
+    "default_title": "Veja o resultado atual da mega-sena aqui.",
+    "default_popup": "index.html"
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "permissions": [
+    "http://www1.caixa.gov.br/"
+  ]
+}
