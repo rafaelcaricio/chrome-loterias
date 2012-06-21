@@ -5,15 +5,63 @@
       <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <title>Resultados das Loterias</title>
     <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ul, li, div, h1 {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        ul {
+            list-style: none;
+        }
+        #loterias-widget {
+            width: 350px;
+        }
+        h1 {
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: normal;
+        }
+        h1 span {
+            margin-top: 8px;
+            float: right;
+        }
+        h2 {
+            font-size: 15px;
+            width: 100%;
+            text-align: center;
+        }
+        .resultado {
+            overflow: hidden;
+        }
+        .num_sorteio li {
+            float: left;
+            margin-left: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        sub {
+            font-size: 10px;
+        }
+        a {
+            width: 100%;
+        }
+    </style>
   </head>
   <body>
     <div id="loterias-widget">
-        <h1>Resultado Mega-Sena <span>Concurso Nº<strong>1399</strong></span></h1>
+        <h1><img src="img/logo_mega_sena.gif" alt="Mega-Sena"> <span>Concurso Nº <strong id="numero-concurso"></strong></span></h1>
         <div class="conteudo">
-            <h2>Data do sorteio: <strong>20/06/2012</strong></h2>
+            <h2>Data do sorteio: <strong id="data-sorteio"></strong></h2>
             <hr />
-            <div class="resultado"> <span class="num_sorteio"><ul><li>39</li><li>43</li><li>60</li><li>57</li><li>34</li><li>56</li></ul></span> </div>
-            <!--<hr />-->
+            <div class="resultado" id="resultado"></div>
+            <hr />
             <!--<h3>Premiação</h3>-->
             <!--<table>-->
                 <!--<thead>-->
@@ -42,7 +90,7 @@
                 <!--</tbody>-->
             <!--</table>-->
         </div>
-        <sub>Dados inseridos manualmente no sistema a partir do site da Caixa.</sub>
+        <sub>* Dados inseridos manualmente no sistema a partir do site da Caixa.</sub>
     </div>
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="js/application.js"></script>
